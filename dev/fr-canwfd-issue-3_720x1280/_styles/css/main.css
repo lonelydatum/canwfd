@@ -224,7 +224,7 @@ sup {
 }
 
 .line2 {
-  clip: rect(0px 1200px 2000px 120px);
+  clip: rect(0px 1200px 2000px 50px);
 }
 
 #banner {

@@ -82,7 +82,7 @@ var start = function start() {
 
 	tl.from(".t2a", .3, { opacity: 0 });
 
-	tl.from(".line2", .3, { clip: "0px 120px 2000px 120px" });
+	tl.from(".line2", .3, { clip: "0px 50px 2000px 50px" });
 
 	tl.from(".t2b", .3, { opacity: 0 }, "+=.5");
 

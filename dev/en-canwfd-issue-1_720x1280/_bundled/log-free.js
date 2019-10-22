@@ -69,10 +69,10 @@ var start = function start() {
 	// tl.to(".frame1", .3, {opacity:0}, "+=4")
 	// issues(tl)
 	TweenLite.from(".bg2", 12, { x: -100, ease: Linear.easeNone });
-	tl.from(".t1", .6, { opacity: 0, x: "-=200", ease: Power2.easeInOut }, "f2");
+	tl.from(".t1", .6, { opacity: 0, x: "-=200", ease: Power2.easeInOut });
 	tl.from(".line", .5, { clip: 'rect(0px 120px 1200px 120px)' }, .8);
 
-	tl.add("f2", "+=3.5");
+	tl.add("f2", "+=3.1");
 
 	tl.to(".frame2", .3, { opacity: 1 }, "f2");
 

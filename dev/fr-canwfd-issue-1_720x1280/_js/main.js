@@ -9,7 +9,7 @@ const start = ()=>{
 
 	// TweenLite.to(".bg", 12, {x:0, ease:Linear.easeNone})
 	TweenLite.from(".bg2", 12, {x:-100, ease:Linear.easeNone})
-	tl.from(".t1", .6, {opacity:0, x:"-=200", ease:Power2.easeInOut}, "f2")
+	tl.from(".t1", .6, {opacity:0, x:"-=200", ease:Power2.easeInOut})
 	tl.from(".line", .5, {clip: 'rect(0px 310px 1280px 310px)'})
 
 
@@ -20,7 +20,7 @@ const start = ()=>{
 	
 	
 
-	tl.add("f2", "+=4")
+	tl.add("f2", "+=3.5")
 
 	tl.to(".frame2", .3, {opacity:1}, "f2")
 
@@ -28,7 +28,7 @@ const start = ()=>{
 	tl.to(".t2", .3, {opacity:0}, '+=4.2')
 	tl.from(".t2a", .3, {opacity:0})
 	
-	tl.from(".line2", .3, {clip: `0px 120px 2000px 120px`})
+	tl.from(".line2", .3, {clip: `0px 50px 2000px 50px`})
 
 	tl.from(".t2b", .3, {opacity:0}, "+=.5")
 
