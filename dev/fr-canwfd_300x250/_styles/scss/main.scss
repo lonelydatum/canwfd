@@ -1,0 +1,36 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+.frame1 {
+	// opacity: 1;
+	.bg{
+		@include pos-scale(-300, 0, .5);
+		// @include pos-scale(0, 0, .5);
+	}
+
+	.line{
+		clip: rect(0px 560px 600px 140px);
+	}
+	
+	
+
+
+	
+}
+
+.line2{
+		clip: rect(0px 470px 600px 50px);
+	}
+
+
+
+#banner{
+	font-size: 20px;
+	color: #333;
+	width: 300px;
+	height: 250px;
+}
+
