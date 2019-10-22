@@ -70,7 +70,7 @@ var start = function start() {
 
 	// tl.to(".frame1", .3, {opacity:0}, "+=4")
 
-	tl.add("f2", "+=3.5");
+	tl.add("f2", "+=3.2");
 
 	tl.to(".frame2", .3, { opacity: 1 }, "f2");
 
