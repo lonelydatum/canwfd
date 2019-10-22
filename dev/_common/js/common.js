@@ -25,6 +25,18 @@ function textList(tl){
 	tl.to([".t1", '.line'], .2, {opacity:0})
 }
 
+function issues(tl, lineTime=1){
+
+	TweenLite.from(".bg2", 12, {x:-100, ease:Linear.easeNone})
+	
+	for(let i=1;i<=8;i++){		
+		const id = `.end${i}`
+		tl.set(id, {opacity:1}, '+=.35')		
+	}
+
+	tl.from(".line", .5, {clip: 'rect(0px 120px 1200px 120px)'}, lineTime)
+}
 
 
-export {size, text, textList}
+
+export {size, text, textList, issues}

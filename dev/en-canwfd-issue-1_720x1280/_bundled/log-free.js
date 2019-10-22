@@ -32,9 +32,23 @@ function textList(tl) {
 	tl.to([".t1", '.line'], .2, { opacity: 0 });
 }
 
+function issues(tl) {
+	var lineTime = arguments.length <= 1 || arguments[1] === undefined ? 1 : arguments[1];
+
+	TweenLite.from(".bg2", 12, { x: -100, ease: Linear.easeNone });
+
+	for (var i = 1; i <= 8; i++) {
+		var id = '.end' + i;
+		tl.set(id, { opacity: 1 }, '+=.35');
+	}
+
+	tl.from(".line", .5, { clip: 'rect(0px 120px 1200px 120px)' }, lineTime);
+}
+
 exports.size = size;
 exports.text = text;
 exports.textList = textList;
+exports.issues = issues;
 
 },{}],2:[function(require,module,exports){
 "use strict";
@@ -52,18 +66,8 @@ var start = function start() {
 	// TweenLite.to(".bg", 12, {x:0, ease:Linear.easeNone})
 	// tl.from(".t1", .3, {opacity:0})
 
-	TweenLite.from(".bg2", 12, { x: -100, ease: Linear.easeNone });
-
-	for (var i = 1; i <= 8; i++) {
-
-		var id = ".end" + i;
-
-		tl.set(id, { opacity: 1 }, '+=.35');
-	}
-
-	tl.from(".line", .5, { clip: 'rect(0px 120px 1200px 120px)' }, 1);
-
 	// tl.to(".frame1", .3, {opacity:0}, "+=4")
+	(0, _commonJsCommonJs.issues)(tl);
 
 	tl.add("f2", "+=4");
 
