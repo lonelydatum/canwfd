@@ -73,7 +73,7 @@ var start = function start() {
 	tl.set(".frame2", { opacity: 1 });
 
 	tl.from(".t2a", .3, { opacity: 0 });
-	tl.from(".line2", .3, { clip: "rect(0px 600px 180px 600px)" });
+	tl.from(".line2", .3, { clip: "rect(0px 20px 100px 20px)" });
 
 	tl.from(".t2b", .3, { opacity: 0 }, '+=.5');
 
