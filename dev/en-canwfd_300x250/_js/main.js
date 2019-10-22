@@ -7,7 +7,7 @@ const start = ()=>{
 
 	tl.set(".frame1", {opacity:1})
 
-	TweenLite.to(".bg", 12, {x:0, ease:Linear.easeNone})
+	
 	tl.from(".t1", .3, {opacity:0})
 	tl.from(".line", .3, {clip: 'rect(0px 180px 600px 180px)'})
 

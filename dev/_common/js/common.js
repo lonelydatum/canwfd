@@ -13,13 +13,14 @@ function text(on, time=.6){
 }
 
 function textList(tl){
+	TweenLite.to(".bg", 9, {x:0, ease:Linear.easeNone})
 	tl.add( text('.t1a'), "+=.5" )
 	tl.add( text('.t1b', '.7') )
 	tl.add( text('.t1c', '.6') )
 	tl.add( text('.t1d', '.5') )
-	tl.add( text('.t1e', '.5') )
-	tl.add( text('.t1f', '.4') )
-	tl.add( text('.t1g', '.4') )
+	// tl.add( text('.t1e', '.5') )
+	// tl.add( text('.t1f', '.4') )
+	// tl.add( text('.t1g', '.4') )
 	tl.add( text('.t1h', 1.8))
 
 	tl.to([".t1", '.line'], .2, {opacity:0})
