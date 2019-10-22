@@ -1,4 +1,4 @@
-import {text} from '../../_common/js/common.js'
+import {text, textList} from '../../_common/js/common.js'
 
 
 const start = ()=>{
@@ -11,18 +11,7 @@ const start = ()=>{
 	tl.from(".t1", .3, {opacity:0})
 	tl.from(".line", .3, {clip: 'rect(0px 180px 600px 180px)'})
 
-	tl.add( text('.t1a'), "+=.5" )
-	tl.add( text('.t1b') )
-	tl.add( text('.t1c') )
-	tl.add( text('.t1d') )
-	tl.add( text('.t1e') )
-	tl.add( text('.t1f') )
-	tl.add( text('.t1g') )
-	
-	
-	tl.add( text('.t1h', 2))
-	tl.to([".t1", '.line'], .2, {opacity:0})
-
+	textList(tl)
 	tl.add("f2")
 
 	tl.set(".frame2", {opacity:1})

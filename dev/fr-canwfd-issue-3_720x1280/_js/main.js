@@ -1,4 +1,4 @@
-import {text} from '../../_common/js/common.js'
+import {text, textList} from '../../_common/js/common.js'
 
 TweenLite.defaultEase = Power2.easeIn
 const start = ()=>{

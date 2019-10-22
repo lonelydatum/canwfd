@@ -10,7 +10,7 @@ var size = { w: banner.offsetWidth, h: banner.offsetHeight };
 TweenLite.defaultEase = Power2.easeInOut;
 
 function text(on) {
-	var time = arguments.length <= 1 || arguments[1] === undefined ? .9 : arguments[1];
+	var time = arguments.length <= 1 || arguments[1] === undefined ? .6 : arguments[1];
 
 	var tltext = new TimelineMax();
 	tltext.from(on, .2, { opacity: 0 });
@@ -19,8 +19,22 @@ function text(on) {
 	return tltext;
 }
 
+function textList(tl) {
+	tl.add(text('.t1a'), "+=.5");
+	tl.add(text('.t1b', '.7'));
+	tl.add(text('.t1c', '.6'));
+	tl.add(text('.t1d', '.5'));
+	tl.add(text('.t1e', '.5'));
+	tl.add(text('.t1f', '.4'));
+	tl.add(text('.t1g', '.4'));
+	tl.add(text('.t1h', 1.8));
+
+	tl.to([".t1", '.line'], .2, { opacity: 0 });
+}
+
 exports.size = size;
 exports.text = text;
+exports.textList = textList;
 
 },{}],2:[function(require,module,exports){
 "use strict";
@@ -33,10 +47,21 @@ var start = function start() {
 	var tl = new TimelineMax();
 
 	tl.set(".frame1", { opacity: 1 });
+	tl.set(".end", { opacity: 0 });
 
 	// TweenLite.to(".bg", 12, {x:0, ease:Linear.easeNone})
-	tl.from(".t1", .3, { opacity: 0 });
-	tl.from(".line", .5, { clip: 'rect(0px 120px 1200px 120px)' });
+	// tl.from(".t1", .3, {opacity:0})
+
+	TweenLite.from(".bg2", 12, { x: -100, ease: Linear.easeNone });
+
+	for (var i = 1; i <= 8; i++) {
+
+		var id = ".end" + i;
+
+		tl.set(id, { opacity: 1 }, '+=.35');
+	}
+
+	tl.from(".line", .5, { clip: 'rect(0px 120px 1200px 120px)' }, 1);
 
 	// tl.to(".frame1", .3, {opacity:0}, "+=4")
 

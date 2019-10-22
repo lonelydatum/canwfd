@@ -10,7 +10,7 @@ var size = { w: banner.offsetWidth, h: banner.offsetHeight };
 TweenLite.defaultEase = Power2.easeInOut;
 
 function text(on) {
-	var time = arguments.length <= 1 || arguments[1] === undefined ? .9 : arguments[1];
+	var time = arguments.length <= 1 || arguments[1] === undefined ? .6 : arguments[1];
 
 	var tltext = new TimelineMax();
 	tltext.from(on, .2, { opacity: 0 });
@@ -19,8 +19,22 @@ function text(on) {
 	return tltext;
 }
 
+function textList(tl) {
+	tl.add(text('.t1a'), "+=.5");
+	tl.add(text('.t1b', '.7'));
+	tl.add(text('.t1c', '.6'));
+	tl.add(text('.t1d', '.5'));
+	tl.add(text('.t1e', '.5'));
+	tl.add(text('.t1f', '.4'));
+	tl.add(text('.t1g', '.4'));
+	tl.add(text('.t1h', 1.8));
+
+	tl.to([".t1", '.line'], .2, { opacity: 0 });
+}
+
 exports.size = size;
 exports.text = text;
+exports.textList = textList;
 
 },{}],2:[function(require,module,exports){
 "use strict";
