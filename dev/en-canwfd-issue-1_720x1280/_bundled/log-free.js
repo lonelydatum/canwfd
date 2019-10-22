@@ -62,7 +62,6 @@ var start = function start() {
 	var tl = new TimelineMax();
 
 	tl.set(".frame1", { opacity: 1 });
-	tl.set(".end", { opacity: 0 });
 
 	// TweenLite.to(".bg", 12, {x:0, ease:Linear.easeNone})
 	// tl.from(".t1", .3, {opacity:0})

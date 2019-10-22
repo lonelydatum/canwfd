@@ -64,7 +64,8 @@ var start = function start() {
 	tl.set(".frame1", { opacity: 1 });
 
 	// TweenLite.to(".bg", 12, {x:0, ease:Linear.easeNone})
-	tl.from(".t1", .3, { opacity: 0 });
+	TweenLite.from(".bg2", 12, { x: -100, ease: Linear.easeNone });
+	tl.from(".t1", .6, { opacity: 0, x: "-=200", ease: Power2.easeInOut }, "f2");
 	tl.from(".line", .5, { clip: 'rect(0px 120px 1200px 120px)' });
 
 	// tl.to(".frame1", .3, {opacity:0})
