@@ -18,7 +18,7 @@ const start = ()=>{
 	
 	
 
-	tl.add("f2", "+=3.1")
+	tl.add("f2", "+=2.6")
 
 	tl.to(".frame2", .3, {opacity:1}, "f2")
 

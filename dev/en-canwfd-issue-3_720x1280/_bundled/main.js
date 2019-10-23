@@ -71,7 +71,7 @@ var start = function start() {
 
 	// tl.to(".frame1", .3, {opacity:0})
 
-	tl.add("f2", "+=3.2");
+	tl.add("f2", "+=2.6");
 
 	tl.to(".frame2", .3, { opacity: 1 }, "f2");
 

@@ -20,7 +20,7 @@ const start = ()=>{
 	tl.from(".t1", .6, {opacity:0, x:"-=200", ease:Power2.easeInOut})
 	tl.from(".line", .5, {clip: 'rect(0px 120px 1200px 120px)'}, .8)
 
-	tl.add("f2", "+=3")
+	tl.add("f2", "+=2.6")
 
 	tl.to(".frame2", .3, {opacity:1}, "f2")
 
